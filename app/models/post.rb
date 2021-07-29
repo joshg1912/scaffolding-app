@@ -1,6 +1,5 @@
 class Post < ApplicationRecord
-  attr_accessible :content, :name, :title
+  attr_accessor :content, :name, :title
   validates :name, presence: true
-  validates :title, presence: true
-  validates :length => { :minimum => 5 }
+  validates :title, presence: true, length: { :minimum => 5 }
 end
